@@ -1,3 +1,6 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,cp950,big5,eucjp,gbk,euc-kr,utf-bom,iso8859-1
@@ -34,4 +37,8 @@ syntax on
 
 set t_Co=256
 set background=dark
+
+if has("autocmd")
+    filetype plugin indent on
+endif
 
