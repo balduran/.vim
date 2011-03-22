@@ -7,7 +7,6 @@ set ambiwidth=double
 set mouse=a
 
 set nu
-"set ai
 set ch=2
 set ci
 
