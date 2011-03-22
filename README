@@ -4,3 +4,5 @@
 2. install
   $ sh ~/.vim/install.sh
 
+3. add bundle
+  $ git submodule add git://github.com/xxx/xxx.git bundle/xxx
