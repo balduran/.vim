@@ -17,6 +17,9 @@ set wrapscan
 set incsearch
 set ignorecase
 
+set wildmenu
+set wildmode=list:longest,full
+
 nmap <C-T>c :tabnew<CR>
 nmap <C-T>k :tabclose<CR>
 nmap <C-H> :tabprev<CR>
