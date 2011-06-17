@@ -7,3 +7,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = git://github.com/sukima/xmledit.git
