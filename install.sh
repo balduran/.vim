@@ -1,3 +1,3 @@
 #!/bin/bash
-[ -L ~/.vimrc ] || ln -s ~/.vim/vimrc ~/.vimrc 
+[ -L $HOME/.vimrc ] || ln -s $PWD/vimrc $HOME/.vimrc 
 
