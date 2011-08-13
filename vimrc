@@ -24,21 +24,24 @@ set t_Co=256
 set nowrap
 " display numbers in leftmost column
 set nu  "line number
+set paste
 set nocompatible  "no compatible vi
 set autoindent
 set ic	"第幾行第幾個字
 set hlsearch  "highlight search
+
 set confirm
 set cursorline  "cursorline
 set laststatus=2
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
-
+set backspace=start,indent,eol
 
 syntax on
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
+set fdm=marker
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -80,9 +83,15 @@ nmap <leader>q :q!<CR>
 nmap <leader>w :w!<CR>
 " ,x save current status and quit vim
 nmap <leader>x :wq!<CR>
-
+map ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nnoremap <Esc>P  P'[v']=
+nnoremap <Esc>p  p'[v']=
 
 map <F2> :NERDTreeToggle<CR>
 
 :ab #b /************************************************
 :ab #e ************************************************/
+
+augroup filetypedetect 
+  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
+augroup END 
