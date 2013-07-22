@@ -1,20 +1,49 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8,big5,latin1,enc-cn,gb2312,gbk
-set termencoding=utf-8
-set ffs=unix,dos
-set ff=unix
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-let &termencoding = &encoding
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (ie. when working on your own plugin)
+Bundle 'file:///Users/gmarik/path/to/plugin'
+" ...
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,korea,sjis,gb18030,latin1
 set ambiwidth=double
+let &termencoding = &encoding
+set ffs=unix,dos
+set ff=unix
 
-filetype on
 filetype indent on
 filetype plugin on
 
@@ -25,7 +54,6 @@ set nowrap
 " display numbers in leftmost column
 set nu  "line number
 set paste
-set nocompatible  "no compatible vi
 set autoindent
 set ic	"第幾行第幾個字
 set hlsearch  "highlight search
