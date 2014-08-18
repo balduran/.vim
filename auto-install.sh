@@ -16,7 +16,7 @@ die() {
 
 git clone git@github.com:balduran/.vim.git "$VIMHOME"
 cd "$VIMHOME"
-#git submodule update --init
+git submodule update --init
 
 sh $VIMHOME/install.sh
 
